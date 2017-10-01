@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 680px;
+    margin: 0;
+    padding: 1em;
+    height: 680px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+   
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 680px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+    height: 680px;
+}
+</style>
+</head>
+  <style type="text/css">
+    p { 
+      font-size:14px; 
+      color:#538b01; 
+      font-weight:bold; 
+      font-style:italic;
+    }
+    .sender {
+      color: #800000;
+     }
+    ul {
+      list-style-type: none;
+      }
+  </style>
+<body>
+
+<div class="container">
+
+<div class="container">
+
+    <div class = "container">
+
+      <form  action="/" method="GET">
+        <div class="form-group">
+          <label for="delay">Message Delay:</label>
+          <input type="text" id="delay" name='delay' placeholder={{delay}}>
+        </div>
+
+        <div>
+          <button type="submit" class="btn btn-default btn-lg">Set message delay</button>
+        </div>
+
+      </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+
+  </div>
+
+<header>
+   <h1>{{streamer_name}}</h1>
+</header>
+  
+<nav>
+  <ul>
+    <h1>Recent Messages(most to least relavent)</h1>
+    <li><span class="sender">{{sender1}}</span> {{result1}}</li>
+    <li><span class="sender">{{sender2}}</span> {{result2}}</li>
+    <li><span class="sender">{{sender3}}</span> {{result3}}</li>
+    <li><span class="sender">{{sender4}}</span> {{result4}}</li>
+  </ul>
+</nav>
+
+<article>
+  <ul>
+    <h1>Older Messages (most to least recent)</h1>
+    <li><span class="sender">{{oldsender1}}</span> {{oldresult1}}</li>
+    <li><span class="sender">{{oldsender2}}</span> {{oldresult2}}</li>
+    <li><span class="sender">{{oldsender3}}</span> {{oldresult3}}</li>
+    <li><span class="sender">{{oldsender4}}</span> {{oldresult4}}</li>
+    <li><span class="sender">{{oldsender5}}</span> {{oldresult5}}</li>
+    <li><span class="sender">{{oldsender6}}</span> {{oldresult6}}</li>
+  </ul>
+</article>
+
+</div>
+
+</body>
+</html>
+<meta http-equiv="refresh" content={{delay}}>
